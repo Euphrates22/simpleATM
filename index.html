@@ -1,0 +1,49 @@
+ <script>
+ alert('A Simple Atm Machine by FAYEFUNMI FEMI, you can input any number as Account number and Any name as Bank name, the Beneficiary name is set as Fayefunmi Femi ');
+
+function acc(){
+var rec = prompt('Input Beneficiary Account Number');
+if(!rec){
+alert('please enter Account number');
+acc();
+}
+}
+
+function bk(){
+var bank = prompt('Input Bank Name');
+if(!bank){
+alert('pleas Enter Bank Name');
+bk();
+}
+}
+
+
+alert('Please input your card correctly');
+let qus=prompt('do you have your card inserted');
+if(qus === 'yes'){
+
+
+var reci= prompt('Input Beneficiary Account Number');
+if(!reci){
+acc();
+}
+var bank = prompt('Input Bank Name');
+if(!bank){
+bk();
+}
+if(confirm(reci+ ' Fayefunmi Femi '  + bank)===true){ 
+let amount =prompt('Enter Amount');
+
+if(confirm('You are about to send '+ amount+' to ' + reci  +' Fayefunmi Femi ,' + bank)===true){ 
+alert('Successfuly Transfer ' + amount);
+alert('THANK YOU');
+}else{
+alert('Transcation cancel, Try again');
+}
+}else{
+alert('Input correct details next time');
+}
+}else{
+alert('please insert your card ');
+}
+</script>
